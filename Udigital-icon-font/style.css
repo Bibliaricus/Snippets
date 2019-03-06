@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Udigital-icon-font';
-  src:  url('fonts/Udigital-icon-font.eot?oi6xjn');
-  src:  url('fonts/Udigital-icon-font.eot?oi6xjn#iefix') format('embedded-opentype'),
-    url('fonts/Udigital-icon-font.ttf?oi6xjn') format('truetype'),
-    url('fonts/Udigital-icon-font.woff?oi6xjn') format('woff'),
-    url('fonts/Udigital-icon-font.svg?oi6xjn#Udigital-icon-font') format('svg');
+  src:  url('fonts/Udigital-icon-font.eot?soy3zj');
+  src:  url('fonts/Udigital-icon-font.eot?soy3zj#iefix') format('embedded-opentype'),
+    url('fonts/Udigital-icon-font.ttf?soy3zj') format('truetype'),
+    url('fonts/Udigital-icon-font.woff?soy3zj') format('woff'),
+    url('fonts/Udigital-icon-font.svg?soy3zj#Udigital-icon-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-font"], [class*=" icon-font"] {
+[class^="icon-font-"], [class*=" icon-font-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'Udigital-icon-font' !important;
   speak: none;
@@ -24,63 +24,57 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-fontheart-solid:before {
-  content: "\e900";
-}
-.icon-fontright-straight-arrow:before {
-  content: "\e901";
-}
-.icon-fonttag-black-shape:before {
-  content: "\e902";
-}
-.icon-fontangle-arrow-down:before {
-  content: "\e903";
-}
-.icon-fontbaseline-today-24px:before {
-  content: "\e904";
-}
-.icon-fontstar-regular:before {
-  content: "\e905";
-}
-.icon-fontstar-solid:before {
-  content: "\e906";
-}
-.icon-font5:before {
+.icon-font-bag:before {
   content: "\e907";
 }
-.icon-fontangle-left-solid:before {
+.icon-font-heart-solid:before {
+  content: "\e900";
+}
+.icon-font-right-straight-arrow:before {
+  content: "\e901";
+}
+.icon-font-tag-black-shape:before {
+  content: "\e902";
+}
+.icon-font-angle-arrow-down:before {
+  content: "\e903";
+}
+.icon-font-baseline-today-24px:before {
+  content: "\e904";
+}
+.icon-font-star-regular:before {
+  content: "\e905";
+}
+.icon-font-star-solid:before {
+  content: "\e906";
+}
+.icon-font-angle-left-solid:before {
   content: "\e908";
 }
-.icon-fontangle-right-solid:before {
+.icon-font-angle-right-solid:before {
   content: "\e909";
 }
-.icon-fontcaret-down-solid:before {
+.icon-font-caret-down-solid:before {
   content: "\e90a";
 }
-.icon-fontfacebook-f-brands:before {
+.icon-font-facebook-f-brands:before {
   content: "\e90b";
 }
-.icon-fontgoogle-plus-logo:before {
+.icon-font-google-plus-logo:before {
   content: "\e90c";
 }
-.icon-fontheart-regular:before {
+.icon-font-heart-regular:before {
   content: "\e90d";
 }
-.icon-fontsearch-solid:before {
+.icon-font-search-solid:before {
   content: "\e90e";
 }
-.icon-fonttwitter-brands:before {
+.icon-font-twitter-brands:before {
   content: "\e90f";
 }
-.icon-fontmenu:before {
-  content: "\e9bd";
-}
-.icon-fonteye:before {
+.icon-font-eye:before {
   content: "\e9ce";
 }
-.icon-fontcircle-right:before {
-  content: "\ea42";
-}
-.icon-fontcircle-left:before {
-  content: "\ea44";
+.icon-font-cart:before {
+  content: "\e93a";
 }
