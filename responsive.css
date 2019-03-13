@@ -14,27 +14,27 @@
 .test {position: fixed; top: 10px; right: 10px; color: tomato; z-index: 99999999;}
 
 @media only screen and (min-width: 1200px){
-    .test:after  { content: '@media (min-width: 1200px) >>>';} 
+    .test:after  { content: '@media (min-width: 1200px [col-xl]) >>>';} 
 
 }
 
 @media only screen and (max-width: 1199.98px){
-    .test:after  { content: '@media (max-width: 1200px)';}   
+    .test:after  { content: '@media (max-width: 1200px [col-lg])';}   
      
 }
 
 @media only screen and (max-width: 991.98px){
-    .test:after  { content: '@media (max-width: 992px)';}  
+    .test:after  { content: '@media (max-width: 992px [col-md])';}  
     
 }
 
 @media only screen and (max-width: 767.98px){
-    .test:after  { content: '@media (max-width: 768px)';}  
+    .test:after  { content: '@media (max-width: 768px [col-sm])';}  
 
 }
 
 @media only screen and (max-width: 575.98px){
-    .test:after  { content: '@media (max-width: 576px)';}  
+    .test:after  { content: '@media (max-width: 576px [col-])';}  
 
 }
 
