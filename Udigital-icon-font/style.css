@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Udigital-icon-font';
-  src:  url('fonts/Udigital-icon-font.eot?soy3zj');
-  src:  url('fonts/Udigital-icon-font.eot?soy3zj#iefix') format('embedded-opentype'),
-    url('fonts/Udigital-icon-font.ttf?soy3zj') format('truetype'),
-    url('fonts/Udigital-icon-font.woff?soy3zj') format('woff'),
-    url('fonts/Udigital-icon-font.svg?soy3zj#Udigital-icon-font') format('svg');
+  src:  url('fonts/Udigital-icon-font.eot?c0fx15');
+  src:  url('fonts/Udigital-icon-font.eot?c0fx15#iefix') format('embedded-opentype'),
+    url('fonts/Udigital-icon-font.ttf?c0fx15') format('truetype'),
+    url('fonts/Udigital-icon-font.woff?c0fx15') format('woff'),
+    url('fonts/Udigital-icon-font.svg?c0fx15#Udigital-icon-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-font-check-mark:before {
+  content: "\e910";
+}
 .icon-font-bag:before {
   content: "\e907";
 }
