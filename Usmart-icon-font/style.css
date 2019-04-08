@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Usmart-icon-font';
   src:
-    url('fonts/Usmart-icon-font.ttf?2bftyo') format('truetype'),
-    url('fonts/Usmart-icon-font.woff?2bftyo') format('woff'),
-    url('fonts/Usmart-icon-font.svg?2bftyo#Usmart-icon-font') format('svg');
+    url('fonts/Usmart-icon-font.ttf?9r4wp7') format('truetype'),
+    url('fonts/Usmart-icon-font.woff?9r4wp7') format('woff'),
+    url('fonts/Usmart-icon-font.svg?9r4wp7#Usmart-icon-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -86,9 +86,6 @@
 .icon-font-heart-regular:before {
   content: "\e90d";
 }
-.icon-font-search-solid:before {
-  content: "\e90e";
-}
 .icon-font-twitter-brands:before {
   content: "\e90f";
 }
@@ -100,6 +97,9 @@
 }
 .icon-font-bubble:before {
   content: "\e96b";
+}
+.icon-font-search:before {
+  content: "\e986";
 }
 .icon-font-instagram:before {
   content: "\ea92";
