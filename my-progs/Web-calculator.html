@@ -11,8 +11,10 @@
 
   </style>
 
+  <h1>Web-calculator v.0.1</h1>
+
 <fieldset>
-  <legend>Web-calculator v.0.1</legend>
+  <legend>Letter spacing (from Photoshop unit to em/rem an px)</legend>
   <form action="#">
     <label for="photoshopUnit">Input Photoshope unit:</label>
     <input type="text" id="photoshopUnit">
@@ -22,14 +24,28 @@
     <br>
     <label for="fontSize">Input font size for element</label>
     <input type="text" id="fontSize">
-    <button onclick="convertor()">Start</button>
+    <br>
+    <button onclick="convertorLS()">Start</button>
   </form>  
 </fieldset>
+
+<fieldset>
+    <legend>Font size (from px to rem)</legend>
+    <form action="#">
+      <label for="psFontSize">Input Photoshope font size in px:</label>
+      <input type="text" id="psFontSize">
+      <br>
+      <label for="baseFont">Input your base font size:</label>
+      <input type="text" id="baseFont">
+      <br>      
+      <button onclick="fontsizer()">Start</button>
+    </form>  
+  </fieldset>
 
   <script>
     // Convert letter-spacing from Photoshope unit to px
 
-    function convertor() {
+    function convertorLS() {
 
       // Input Photoshop unit to this variable
       var photoshopUnit = document.getElementById('photoshopUnit').value;
@@ -44,10 +60,15 @@
 
        document.write('Letter spacing in em (or maybe rem): ' + letterSpacingInEm + 'px' + '<br>' + 
             'Letter spacing in px: ' + letterSpacingInPx + 'px' + '<br>' +
-            'True Letter spacing in em: ' + trueSpacingInEm + 'em');
-      return console.log(photoshopUnit);
-      console.log(baseFontSize);
-      console.log(fontSize);
+            'True Letter spacing in em: ' + trueSpacingInEm + 'em');      
+    }
+
+    function fontsizer() {
+      var psFontSize = document.getElementById('psFontSize').value;
+      var baseFont = document.getElementById('baseFont').value;
+
+       var fontsizerResult = psFontSize / baseFont;
+       document.write('Font size in rem is: ' + fontsizerResult + 'rem');
     }
 
 </script>
