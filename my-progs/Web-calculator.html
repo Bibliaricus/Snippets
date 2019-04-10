@@ -13,40 +13,35 @@
 
   <h1>Web-calculator v.0.1</h1>
 
-<fieldset>
-  <legend>Letter spacing (from Photoshop unit to em/rem an px)</legend>
-  <form action="#">
-    <label for="photoshopUnit">Input Photoshope unit:</label>
-    <input type="text" id="photoshopUnit">
-    <br>
-    <label for="base">Input base font size</label>
-    <input type="text" id="base">
-    <br>
-    <label for="fontSize">Input font size for element</label>
-    <input type="text" id="fontSize">
-    <br>
-    <button onclick="convertorLS()">Start</button>
-  </form>  
-</fieldset>
-
-<fieldset>
-    <legend>Font size (from px to rem)</legend>
-    <form action="#">
-      <label for="psFontSize">Input Photoshope font size in px:</label>
-      <input type="text" id="psFontSize">
+<form action="#">
+  <fieldset>
+    <legend>Letter spacing (from Photoshop unit to em/rem an px)</legend>  
+      <label for="photoshopUnit">Input Photoshope unit:</label>
+      <input type="text" id="photoshopUnit">
       <br>
-      <label for="baseFont">Input your base font size:</label>
-      <input type="text" id="baseFont">
-      <br>      
-      <button onclick="fontsizer()">Start</button>
-    </form>  
+      <label for="fontSize">Input font size for element</label>
+      <input type="text" id="fontSize">
+      <br>
+      <label for="base">Input base font size</label>
+      <input type="text" id="base">      
   </fieldset>
 
+  <fieldset>
+      <legend>Font size (from px to rem)</legend>    
+        <label for="psFontSize">Input Photoshope font size in px:</label>
+        <input type="text" id="psFontSize">
+        <br>
+        <label for="baseFont">Input your base font size:</label>
+        <input type="text" id="baseFont">
+      </fieldset>
+      <br>
+      <button onclick="web_convertor_3000()">Start</button>    
+</form>
+
   <script>
+    // Total function 
+    function web_convertor_3000() {
     // Convert letter-spacing from Photoshope unit to px
-
-    function convertorLS() {
-
       // Input Photoshop unit to this variable
       var photoshopUnit = document.getElementById('photoshopUnit').value;
       var baseFontSize = document.getElementById('base').value;
@@ -56,19 +51,25 @@
 
       var letterSpacingInEm = photoshopUnit / 1000;
       var letterSpacingInPx = photoshopUnit * fontSize / 1000;
-      var trueSpacingInEm = letterSpacingInPx / baseFontSize;
+      var trueSpacingInEm = letterSpacingInPx / baseFontSize;            
 
-       document.write('Letter spacing in em (or maybe rem): ' + letterSpacingInEm + 'px' + '<br>' + 
-            'Letter spacing in px: ' + letterSpacingInPx + 'px' + '<br>' +
-            'True Letter spacing in em: ' + trueSpacingInEm + 'em');      
-    }
-
-    function fontsizer() {
+    // Convert font size from px to rem
+      
       var psFontSize = document.getElementById('psFontSize').value;
+
       var baseFont = document.getElementById('baseFont').value;
 
-       var fontsizerResult = psFontSize / baseFont;
-       document.write('Font size in rem is: ' + fontsizerResult + 'rem');
+      var fontsizerResult = psFontSize / baseFont;
+      // document.write('Font size in rem is: ' + fontsizerResult + 'rem');
+
+      // Output
+      document.write(
+            '<h2>Letter spacing in rem and px</h2>' +
+            'Letter spacing in em (or maybe rem): ' + letterSpacingInEm + 'px' + '<br>' + 
+            'Letter spacing in px: ' + letterSpacingInPx + 'px' + '<br>' +
+            'True Letter spacing in em: ' + trueSpacingInEm + 'em' +
+            '<h2>Font size (from px to rem)</h2>' +
+            'Font size in rem is: ' + fontsizerResult + 'rem'); 
     }
 
 </script>
