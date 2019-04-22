@@ -27,13 +27,21 @@
   </fieldset>
 
   <fieldset>
-      <legend>Font size (from px to rem)</legend>    
-        <label for="psFontSize">Input Photoshope font size in px:</label>
-        <input type="text" id="psFontSize">
-        <br>
-        <label for="baseFont">Input your base font size:</label>
-        <input type="text" id="baseFont">
-      </fieldset>
+    <legend>Font size (from px to rem)</legend>    
+      <label for="psFontSize">Input Photoshope font size in px:</label>
+      <input type="text" id="psFontSize">
+      <br>
+      <label for="baseFont">Input your base font size:</label>
+      <input type="text" id="baseFont">
+  </fieldset>
+  <fieldset>
+    <legend>Font size in viewport (from px (depending initial maket size (taken for initital screen size)) to vw)</legend>
+    <label for="elementFontSize">Input font size from Photoshop:</label>
+    <input type="text" id="elementFontSize">
+    <br>
+    <label for="maketSize">Input size of maket in Photoshop:</label>
+    <input type="text" id="maketSize">
+  </fieldset>
       <br>
       <button onclick="web_convertor_3000()">Start</button>    
 </form>
@@ -41,6 +49,9 @@
   <script>
     // Total function 
     function web_convertor_3000() {
+
+// ********************************** Convertor of letter-spacing ******************************
+
     // Convert letter-spacing from Photoshope unit to px
       // Input Photoshop unit to this variable
       var photoshopUnit = document.getElementById('photoshopUnit').value;
@@ -53,6 +64,8 @@
       var letterSpacingInPx = photoshopUnit * fontSize / 1000;
       var trueSpacingInEm = letterSpacingInPx / baseFontSize;            
 
+// ********************************** Convertor font size (px to rem) ******************************
+
     // Convert font size from px to rem
       
       var psFontSize = document.getElementById('psFontSize').value;
@@ -62,14 +75,25 @@
       var fontsizerResult = psFontSize / baseFont;
       // document.write('Font size in rem is: ' + fontsizerResult + 'rem');
 
+// ********************************** Convertor font fize to viewport (px to vw) ******************************
+
+      var elementFontSize = document.getElementById('elementFontSize').value;
+      var maketSize = document.getElementById('maketSize').value;
+
+      var totalVw = (elementFontSize * 100) / maketSize;
+      var smoothVw = ((elementFontSize - 16) * 100) / maketSize;
+
       // Output
       document.write(
             '<h2>Letter spacing in rem and px</h2>' +
             'Letter spacing in em (or maybe rem): ' + letterSpacingInEm + 'px' + '<br>' + 
             'Letter spacing in px: ' + letterSpacingInPx + 'px' + '<br>' +
-            'True Letter spacing in em: ' + trueSpacingInEm + 'em' +
+            'True Letter spacing in rem: ' + trueSpacingInEm + 'rem' +
             '<h2>Font size (from px to rem)</h2>' +
-            'Font size in rem is: ' + fontsizerResult + 'rem'); 
+            'Font size in rem is: ' + fontsizerResult + 'rem' +
+            '<h2>Font size in viewport</h2>' +
+            'Font size in native vw is: ' + totalVw + 'vw' + '<br>' +
+            'Font size in vw with - 16px for smooth is: ' + smoothVw + 'vw'); 
     }
 
 </script>
